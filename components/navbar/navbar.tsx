@@ -16,7 +16,7 @@ export default function Navbar() {
     sticky
     top-0
     z-50
-    bg-secondary-40
+    bg-primary-200
     h-24
     "
         >

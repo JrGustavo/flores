@@ -78,13 +78,13 @@ export default function Footer() {
     const currentLinks = language === 'es' ? footerLinks : footerLinksEn
 
     return (
-        <footer className="bg-secondary-300 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <footer className="bg-primary-700 text-white py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="space-y-6">
-                    <Image src="/Logo/Petal-Secondary.svg" alt="Fleet Logo" width={120} height={40} />
+                    <Image src="/Logo/PetalFlores.svg" alt="Petal Logo" width={120} height={40} />
                     <button
                         onClick={toggleLanguage}
-                        className="flex items-center space-x-2 bg-gray-800 rounded-full py-2 px-4 w-fit hover:bg-gray-700 transition-colors"
+                        className="flex items-center space-x-2 bg-primary-700 rounded-full py-2 px-4 w-fit hover:bg-primary-600 transition-colors"
                         aria-label={`Change language to ${language === 'es' ? 'English' : 'Spanish'}`}
                     >
                         <Image

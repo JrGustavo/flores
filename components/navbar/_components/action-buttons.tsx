@@ -41,7 +41,7 @@ const ActionButtons = () => {
             hidden
             "
                 >
-                    <div className="font-bold flex ">Tarifas</div>
+                    <div className="font-bold flex ">Empresas</div>
                 </Link>
 
 
@@ -53,7 +53,7 @@ const ActionButtons = () => {
                     <Button
                         className="
                         hidden
-                        text-primary-600
+                        text-primary-200
                         text-md
                         font-bold
                         bg-primary-700
@@ -65,19 +65,19 @@ const ActionButtons = () => {
                         shadow-md
                         md:hidden
                         lg:flex
-                        hover:shadow-primary-700
+                        hover:shadow-primary-600
                 ">
-                        Contactar con ventas
+                        Compras al por mayor
                     </Button>
                 </Link>
                 <Link href={"/Login"}>
                     <Button
                         className="
               hidden
-              text-primary-600
+              text-primary-100
               text-md
               font-bold
-              bg-secondary-300
+              bg-primary-300
               p-6
               rounded-[40px]
               hover:scale-110
@@ -96,19 +96,19 @@ const ActionButtons = () => {
                 <div
                     onClick={toggleDropdown}
                     className="
-             bg-secondary-300
+           bg-primary-700
              p-3
              rounded-full
              xl:hidden
              ">
-                    <X className="h-6 w-6 text-primary-600 items-center justify-center rounded-full" />
+                    <X className="h-6 w-6 text-primary-200 items-center justify-center rounded-full" />
                 </div>
             )}
             {!isDropdownVisible && (
                 <div
                     onClick={toggleDropdown}
-                    className="bg-secondary-300 p-3 rounded-full xl:hidden">
-                    <AlignJustify className="h-6 w-6 text-primary-600 items-center justify-center rounded-full" />
+                    className="bg-primary-700 p-3 rounded-full xl:hidden">
+                    <AlignJustify className="h-6 w-6 text-primary-200 items-center justify-center rounded-full" />
                 </div>
             )}
 

@@ -2,6 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 export default function BlackFridayBanner() {
     return (
@@ -18,17 +20,32 @@ export default function BlackFridayBanner() {
                 />
                 <div className="relative z-10 text-center md:text-left max-w-xl mx-auto md:mx-0">
                     <p className="text-white/90 tracking-wide uppercase mb-4">
-                        Black Friday Cyber Monday
+                        Vive momentos especiales con Petal Flores
                     </p>
                     <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-8">
-                        25% Off Everything
+                        10% de descuento en toda la tienda
                     </h1>
-                    <Button
-                        variant="outline"
-                        className="bg-white text-[#1A332F] hover:bg-white/90 border-0 text-lg px-8 py-6"
-                    >
-                        Shop Now
-                    </Button>
+                    <Link href={"/Contacto"}>
+                        <Button
+                            className="
+                        hidden
+                        text-primary-100
+                        text-md
+                        font-bold
+                        bg-primary-200
+                        p-6
+                        rounded-[40px]
+                        hover:scale-110
+                        transition-all
+                        duration-300
+                        shadow-md
+                        md:hidden
+                        lg:flex
+                        hover:shadow-primary-600
+                ">
+                            Comprar ahora
+                        </Button>
+                    </Link>
                 </div>
             </div>
 

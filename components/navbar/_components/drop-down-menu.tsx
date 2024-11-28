@@ -337,10 +337,10 @@ const DropdownMenu : React.FC<DropDownMenuProps> = ({onClose}) => {
                     <Link href={"/"}>
                         <Button
                             className="
-                        text-primary-600
+                        text-primary-100
                         text-sm
                         font-bold
-                        bg-secondary-300
+                        bg-primary-300
                         p-6
                         rounded-[40px]
                         hover:scale-110
@@ -348,6 +348,7 @@ const DropdownMenu : React.FC<DropDownMenuProps> = ({onClose}) => {
                         duration-300
                         shadow-md
                         hover:700
+                        hover:shadow-primary-700
                         ">
                             Ingresar
                         </Button>
@@ -355,7 +356,7 @@ const DropdownMenu : React.FC<DropDownMenuProps> = ({onClose}) => {
                     <Link href={"/"}>
                         <Button
                             className="
-                        text-primary-600
+                        text-primary-200
                         text-sm
                         font-bold
                         bg-primary-700
@@ -366,6 +367,7 @@ const DropdownMenu : React.FC<DropDownMenuProps> = ({onClose}) => {
                         duration-300
                         shadow-md
                         hover:700
+                        hover:shadow-primary-700
                         ">
                             Contactar con ventas
                         </Button>

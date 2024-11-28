@@ -9,7 +9,7 @@ const stratosSans = localFont({
 });
 
 const stratosweb = localFont({
-  src: "./fonts/stratosweb-semibold-TRIAL-BF63c604b516433.woff",
+  src: "./fonts/stratosweb-blackitalic.woff",
   variable: "--font-stratos-mono",
   weight: "100 900",
 });
