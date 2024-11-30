@@ -54,8 +54,8 @@ export default function SixSection() {
     return (
         <section className="px-4 py-16 max-w-7xl mx-auto overflow-hidden">
             <div className="flex justify-between items-center mb-12">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-gray-900">
-                    More Than 20,000 Five-Star Reviews
+                <h2 className="text-3xl md:text-4xl lg:text-5xl  text-gray-900">
+                    Reseñas de nuestros clientes
                 </h2>
                 <Button variant="link" className="text-sm font-medium hidden md:block">
                     SEE ALL REVIEWS

@@ -5,27 +5,27 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const occasions = [
     {
-        title: "Thank You",
+        title: "Arreglos florales",
         image: "/placeholder.svg?height=400&width=300",
         alt: "Pink and white flower arrangement with roses and carnations"
     },
     {
-        title: "Birthday",
+        title: "Orquídeas",
         image: "/placeholder.svg?height=400&width=300",
         alt: "Yellow and orange roses in a gold vase with table setting"
     },
     {
-        title: "Friendship",
+        title: "Cumpleaños",
         image: "/placeholder.svg?height=400&width=300",
         alt: "Friends walking with flower bouquets"
     },
     {
-        title: "Sympathy",
+        title: "Aniversarios",
         image: "/placeholder.svg?height=400&width=300",
         alt: "White and cream sympathy bouquet with anemones"
     },
     {
-        title: "Congratulations",
+        title: "Mejórate pronto",
         image: "/placeholder.svg?height=400&width=300",
         alt: "Orange and pink roses with greenery"
     }
@@ -78,8 +78,8 @@ export default function SecondSection() {
 
     return (
         <section className="px-4 py-12 max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-serif text-gray-900 mb-8">
-                Flowers & Gifts For Every Occasion
+            <h1 className="text-4xl md:text-5xl  text-gray-900 mb-8">
+                Flores y regalos para todos los días
             </h1>
 
             <div

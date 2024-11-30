@@ -1,61 +1,86 @@
-"use client"
+"use client";
 
-import { useState, useRef } from "react"
-import { Pause, Play } from 'lucide-react'
-import { Button } from "@/components/ui/button"
+import { useState, useRef } from "react";
+import { Pause, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const instagramContent = [
-    {
-        id: 1,
-        type: "video",
-        url: "/placeholder.mp4",
-        thumbnail: "/placeholder.svg?height=600&width=400",
-        alt: "Person holding a white rose bouquet"
-    },
-    {
-        id: 2,
-        type: "video",
-        url: "/placeholder.mp4",
-        thumbnail: "/placeholder.svg?height=400&width=400",
-        alt: "Customer receiving flower delivery"
-    },
-    {
-        id: 3,
-        type: "video",
-        url: "/placeholder.mp4",
-        thumbnail: "/placeholder.svg?height=600&width=400",
-        alt: "Delivery person on bicycle"
-    },
-    {
-        id: 4,
-        type: "video",
-        url: "/placeholder.mp4",
-        thumbnail: "/placeholder.svg?height=600&width=800",
-        alt: "People picking flowers in garden"
-    },
-    {
-        id: 5,
-        type: "video",
-        url: "/placeholder.mp4",
-        thumbnail: "/placeholder.svg?height=600&width=800",
-        alt: "People picking flowers in garden"
-    }
-]
+const VideoGrid = () => {
+    const videos = Array.from({ length: 5 }, () => useRef<HTMLVideoElement>(null));
+    const [playing, setPlaying] = useState<boolean[]>(Array(5).fill(false));
 
-function VideoTile({ url, thumbnail, alt }: { url: string; thumbnail: string; alt: string }) {
-    const [isPlaying, setIsPlaying] = useState(false)
-    const videoRef = useRef<HTMLVideoElement>(null)
+    const togglePlayPause = (index: number) => {
+        const videoElement = videos[index]?.current;
+        if (!videoElement) return;
+
+        const isPlaying = playing[index];
+        if (isPlaying) {
+            videoElement.pause();
+        } else {
+            videoElement.play();
+        }
+
+        const newPlayingState = [...playing];
+        newPlayingState[index] = !isPlaying;
+        setPlaying(newPlayingState);
+    };
+
+    return (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {videos.map((ref, index) => (
+                <div
+                    key={index}
+                    className={`${
+                        index === 0 ? "sm:col-span-2 sm:row-span-2" : ""
+                    } relative`}
+                >
+                    {/* Video element */}
+                    <video
+                        ref={ref}
+                        src="/Video/Flowers.mp4"
+                        className="w-full h-full object-cover rounded-lg"
+                        loop
+                        muted
+                    />
+
+                    {/* Custom play/pause button */}
+                    <button
+                        onClick={() => togglePlayPause(index)}
+                        className="absolute bottom-4 right-4 bg-primary-700 hover:bg-black text-white hover:text-white rounded-full p-3"
+                    >
+                        {playing[index] ? (
+                            <Pause className="w-6 h-6"/>
+                        ) : (
+                            <Play className="w-6 h-6"/>
+                        )}
+                    </button>
+                </div>
+            ))}
+        </div>
+    );
+};
+
+const VideoTile = ({
+                       url,
+                       thumbnail,
+                       alt,
+                   }: {
+    url: string;
+    thumbnail: string;
+    alt: string;
+}) => {
+    const [isPlaying, setIsPlaying] = useState(false);
+    const videoRef = useRef<HTMLVideoElement>(null);
 
     const togglePlay = () => {
         if (videoRef.current) {
             if (isPlaying) {
-                videoRef.current.pause()
+                videoRef.current.pause();
             } else {
-                videoRef.current.play()
+                videoRef.current.play();
             }
-            setIsPlaying(!isPlaying)
+            setIsPlaying(!isPlaying);
         }
-    }
+    };
 
     return (
         <div className="relative group cursor-pointer overflow-hidden rounded-lg aspect-square sm:aspect-video">
@@ -82,47 +107,24 @@ function VideoTile({ url, thumbnail, alt }: { url: string; thumbnail: string; al
                 </div>
             </button>
         </div>
-    )
-}
+    );
+};
 
 export default function SevenSection() {
     return (
         <section className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-8">
-                    <h2 className="text-4xl font-serif text-gray-900 mb-6">
-                        As Seen On Instagram
-                    </h2>
+                    <h2 className="text-4xl text-gray-900 mb-6">Síguenos en Instagram</h2>
                     <Button
                         variant="secondary"
-                        className="bg-[#2D3436] text-white hover:bg-[#2D3436]/90"
+                        className="bg-primary-700 font-bold text-white hover:bg-primary-300 hover:text-black"
                     >
-                        FOLLOW ALONG
+                        @petal_flores
                     </Button>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {/* Large tile - spans 2 columns and 2 rows */}
-                    <div className="sm:col-span-2 sm:row-span-2">
-                        <VideoTile {...instagramContent[0]} />
-                    </div>
-
-                    {/* Regular tiles */}
-                    <div>
-                        <VideoTile {...instagramContent[1]} />
-                    </div>
-                    <div>
-                        <VideoTile {...instagramContent[2]} />
-                    </div>
-                    <div>
-                        <VideoTile {...instagramContent[3]} />
-                    </div>
-                    <div className="sm:col-span-2">
-                        <VideoTile {...instagramContent[4] || instagramContent[0]} />
-                    </div>
-                </div>
+                <VideoGrid />
             </div>
         </section>
-    )
+    );
 }
-

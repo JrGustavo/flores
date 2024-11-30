@@ -80,7 +80,7 @@ export default function ThirdSection() {
     return (
         <section className="px-4 py-12 max-w-7xl mx-auto">
             <div className="flex items-center justify-between mb-8">
-                <h2 className="text-4xl font-serif text-gray-900">Shop Our Best Sellers</h2>
+                <h2 className="text-4xl  text-gray-900">Compra ahora los mejores regalos</h2>
                 <Button variant="link" className="text-sm font-medium">
                     SHOP ALL
                 </Button>

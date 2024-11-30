@@ -4,33 +4,33 @@ import { Button } from "@/components/ui/button"
 
 const features = [
     {
-        title: "Subscribe & Save",
+        title: "Suscripciones",
         description: "Save up to 30% and enjoy free shipping on all your deliveries and a vase with the first send.",
         image: "/placeholder.svg?height=600&width=450",
         alt: "Person holding a beautiful bouquet with peach and pink flowers",
-        cta: "Learn More"
+        cta: "Comprar ahora"
     },
     {
-        title: "Same-Day Delivery",
+        title: "Entregas el mismo día ",
         description: "Get it there fast with a same-day delivery in eight major cities including NYC, DC, LA, and Miami.",
         image: "/placeholder.svg?height=600&width=450",
         alt: "Person with bicycle carrying flower delivery",
-        cta: "Send Now"
+        cta: "Realizar pedido"
     },
     {
-        title: "Designed to Impress",
+        title: "Diseños especiales",
         description: "Our in-house floral designer works directly with our farms to source and create florals you won't find anywhere else.",
         image: "/placeholder.svg?height=600&width=450",
         alt: "Elegant white flower arrangement with candles",
-        cta: "About Us"
+        cta: "Descubir más"
     }
 ]
 
 export default function FourSection() {
     return (
         <section className="px-4 py-16 max-w-7xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-serif text-gray-900 mb-12">
-                Discover More
+            <h2 className="text-4xl md:text-5xl  text-gray-900 mb-12">
+                Descubre Petal
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -45,7 +45,7 @@ export default function FourSection() {
                             />
                         </div>
 
-                        <h3 className="text-2xl font-serif text-gray-900 mb-3">
+                        <h3 className="text-2xl  text-gray-900 mb-3">
                             {feature.title}
                         </h3>
 

@@ -23,28 +23,29 @@ export default function FiveSection() {
         <section className="min-h-screen">
             <div className="grid lg:grid-cols-2 min-h-screen">
                 {/* Video Section */}
-                <div className="relative h-[50vh] lg:h-screen bg-gray-900">
+                <div className="relative w-full h-[50vh] lg:h-screen">
                     <video
                         ref={videoRef}
                         className="w-full h-full object-cover"
                         loop
                         muted
                         playsInline
-                        poster="/placeholder.svg?height=1080&width=1920"
+                        poster="/Header/Flowers1.jpg"  // Aquí reemplazas la ruta del video por una imagen
                     >
-                        <source src="/placeholder.mp4" type="video/mp4" />
+                        <source src="/Video/Flowers.mp4" type="video/mp4"/>
+                        Your browser does not support the video tag.
                     </video>
 
                     {/* Play/Pause Button */}
                     <button
                         onClick={togglePlay}
-                        className="absolute bottom-6 left-6 w-12 h-12 rounded-full bg-white/90 flex items-center justify-center hover:bg-white transition-colors z-10"
+                        className="absolute bottom-6 left-6 w-12 h-12 rounded-full bg-white/90 flex items-center justify-center hover:bg-black transition-colors z-10"
                         aria-label={isPlaying ? "Pause video" : "Play video"}
                     >
                         {isPlaying ? (
-                            <Pause className="w-6 h-6 text-gray-900" />
+                            <Pause className="w-6 h-6 text-gray-900"/>
                         ) : (
-                            <Play className="w-6 h-6 text-gray-900" />
+                            <Play className="w-6 h-6 text-gray-900"/>
                         )}
                     </button>
                 </div>
@@ -53,22 +54,22 @@ export default function FiveSection() {
                 <div className="flex items-center justify-center p-8 lg:p-16">
                     <div className="max-w-xl">
                         <div className="space-y-6">
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif tracking-tight">
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl tracking-tight">
                                 Flower Subscriptions Starting at Just $55 With Free Shipping on Every Delivery
                             </h1>
 
                             <p className="text-lg text-gray-600">
                                 Keep the mood fresh with stunning bouquets, delivered right on time.
-                                Whether it's for you or someone else, it's the simplest way to turn
+                                Whether for you or someone else, the simplest way to turn
                                 a simple gesture into an ongoing experience.
                             </p>
 
                             <div className="flex items-center gap-8">
                                 <Button
                                     size="lg"
-                                    className="bg-[#2D3436] hover:bg-[#2D3436]/90 text-white px-8"
+                                    className="bg-primary-300 hover:bg-primary-700 text-black hover:text-white px-8"
                                 >
-                                    GET STARTED
+                                    Comprar ahora
                                 </Button>
 
                                 {/* Brand Stamp */}
@@ -81,12 +82,12 @@ export default function FiveSection() {
                                         />
                                         <text fontSize="11">
                                             <textPath href="#curve">
-                                                DESIGNED IN NEW YORK • DELIVERED IN NEW YORK •
+                                                Diseñado en Colombia
                                             </textPath>
                                         </text>
                                     </svg>
                                     <div className="absolute inset-0 flex items-center justify-center">
-                                        <span className="text-xs font-medium">URBAN STEMS</span>
+                                        <span className="text-xs font-medium">Petal</span>
                                     </div>
                                 </div>
                             </div>
@@ -97,4 +98,3 @@ export default function FiveSection() {
         </section>
     )
 }
-

@@ -7,8 +7,8 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function AditionalSection() {
     return (
         <section className="max-w-7xl mx-auto px-4 py-12">
-            <h2 className="text-4xl font-serif text-gray-900 mb-8">
-                Shop The Look
+            <h2 className="text-4xl  text-gray-900 mb-8">
+                Colección floral de temporada
             </h2>
 
             <div className="relative rounded-2xl overflow-hidden">
@@ -52,8 +52,8 @@ export default function AditionalSection() {
                                     <p className="text-sm text-gray-600 mb-4">
                                         Handmade with magnolia leaves and a festive green bow.
                                     </p>
-                                    <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white">
-                                        SHOP NOW
+                                    <Button className="w-full bg-primary-600 hover:bg-gray-800 text-white">
+                                        Comprar ahora
                                     </Button>
                                 </div>
                             </div>
