@@ -49,7 +49,7 @@ const ActionButtons = () => {
 
             <div className="flex lg:space-x-4 items-center">
 
-                <Link href={"/Contacto"}>
+                <Link href={"/TiendaPetal"}>
                     <Button
                         className="
                         hidden
