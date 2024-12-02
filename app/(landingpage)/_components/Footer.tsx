@@ -7,61 +7,61 @@ import Link from "next/link";
 
 const footerLinks = [
     {
-        title: "Petal",
+        title: "Petal Flores",
         links: [
-            { name: "Nosotros", href: "#" },
-            { name: "Centro de soporte", href: "#" },
-            { name: "Carreras", href: "#" },
-            { name: "Noticias Petal", href: "#" }
+            { name: "Nuestra historia", href: "#" },
+            { name: "Impacto Social", href: "#" },
+            { name: "Prensa", href: "#" },
+            { name: "Términos y condiciones ", href: "#" }
 
         ]
     },
     {
-        title: "Productos",
+        title: "Categorías",
         links: [
-            { name: "Plataforma Petal", href: "#" },
-            { name: "Prevención del fraude", href: "#" },
-            { name: "Verificación KYB", href: "#" },
-            { name: "Petal Score", href: "#" }
+            { name: "Arreglos florales", href: "#" },
+            { name: "Plantas", href: "#" },
+            { name: "Comprar al por mayor", href: "#" },
+            { name: "Regalos corporativos", href: "#" }
         ]
     },
     {
-        title: "Developers",
+        title: "Experiencia al cliente",
         links: [
-            { name: "Documentación", href: "#" },
-            { name: "Bibliotecas & API", href: "#" },
-            { name: "Integraciones", href: "#" },
-            { name: "Petal templates", href: "#" },
+            { name: "¿Cómo hacer un pedido?", href: "#" },
+            { name: "Atención al cliente", href: "#" },
+            { name: "Zona de proveedores", href: "#" },
+            { name: "Trabaja con nosotros", href: "#" },
         ]
     }
 ]
 
 const footerLinksEn = [
     {
-        title: "Petal",
+        title: "Petal Flowers",
         links: [
-            { name: "About Us", href: "#" },
-            { name: "Support Center", href: "#" },
-            { name: "Careers", href: "#" },
-            { name: "Petal News", href: "#" }
+            { name: "Our history", href: "#" },
+            { name: "Social impact", href: "#" },
+            { name: "Press", href: "#" },
+            { name: "Terms and Conditions", href: "#" }
         ]
     },
     {
-        title: "Products",
+        title: "Categories",
         links: [
-            { name: "Petal Platform", href: "#" },
-            { name: "Fraud Prevention", href: "#" },
-            { name: "KYB Verification", href: "#" },
-            { name: "Petal Score", href: "#" }
+            { name: "Floral arrangements", href: "#" },
+            { name: "Plants", href: "#" },
+            { name: "Buy wholesale", href: "#" },
+            { name: "Corporate gifts", href: "#" }
         ]
     },
     {
-        title: "Developers",
+        title: "Customer experience",
         links: [
-            { name: "Documentation", href: "#" },
-            { name: "Libraries & API", href: "#" },
-            { name: "Integrations", href: "#" },
-            { name: "Petal Templates", href: "#" }
+            { name: "How to place an order?", href: "#" },
+            { name: "Customer Service", href: "#" },
+            { name: "Suppliers Area", href: "#" },
+            { name: "Work with us", href: "#" }
         ]
     }
 ]
@@ -81,7 +81,7 @@ export default function Footer() {
         <footer className="bg-primary-700 text-white py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="space-y-6">
-                    <Image src="/Logo/PetalFlores.svg" alt="Petal Logo" width={120} height={40} />
+                    <Image src="/Logo/PetalFloresWhite.svg" alt="Petal Logo" width={120} height={40} />
                     <button
                         onClick={toggleLanguage}
                         className="flex items-center space-x-2 bg-primary-700 rounded-full py-2 px-4 w-fit hover:bg-primary-600 transition-colors"
@@ -98,13 +98,13 @@ export default function Footer() {
                     </button>
                     <div className="flex space-x-4">
                         <Link href="https://www.linkedin.com/company/fleet-ai" aria-label="LinkedIn">
-                            <Linkedin size={24} className="hover:text-[#ffd140]" />
+                            <Linkedin size={24} className="hover:text-[#FDF888]" />
                         </Link>
                         <Link href="https://x.com/" aria-label="Twitter">
-                            <X size={24} className="hover:text-[#ffd140]" />
+                            <X size={24} className="hover:text-[#FDF888]" />
                         </Link>
                         <Link href="https://www.instagram.com/" aria-label="Instagram">
-                            <Instagram size={24} className="hover:text-[#ffd140]" />
+                            <Instagram size={24} className="hover:text-[#FDF888]" />
                         </Link>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ export default function Footer() {
                         <ul className="space-y-2">
                             {section.links.map((link, linkIndex) => (
                                 <li key={linkIndex}>
-                                    <Link href={link.href} className="text-[#ffffff] hover:underline hover:text-[#ffd140]">
+                                    <Link href={link.href} className="text-[#ffffff] hover:underline hover:text-[#FDF888]">
                                         {link.name}
                                     </Link>
                                 </li>
